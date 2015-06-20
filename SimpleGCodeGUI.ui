@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>PyQt : CNC GCode GUI </string>
+   <string>Simple G-Code GUI v0.2</string>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -526,6 +526,9 @@ background-color: rgb(170, 255, 255);</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_HOME_Z">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>293</x>
