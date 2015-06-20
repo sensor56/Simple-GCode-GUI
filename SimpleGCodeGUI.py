@@ -2,8 +2,7 @@
 
 # Form implementation generated from reading ui file 
 #
-# Created: Sun May  3 12:07:39 2015
-#      by: PyQt4 UI code generator 4.11.2
+# Created by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -163,6 +162,7 @@ class Ui_Form(object):
         self.pushButton_HOME_Y.setStyleSheet(_fromUtf8("background-color: rgba(0, 255, 0, 127);"))
         self.pushButton_HOME_Y.setObjectName(_fromUtf8("pushButton_HOME_Y"))
         self.pushButton_HOME_Z = QtGui.QPushButton(Form)
+        self.pushButton_HOME_Z.setEnabled(False)
         self.pushButton_HOME_Z.setGeometry(QtCore.QRect(293, 275, 65, 27))
         self.pushButton_HOME_Z.setStyleSheet(_fromUtf8("background-color: rgba(0, 160, 255, 255);"))
         self.pushButton_HOME_Z.setObjectName(_fromUtf8("pushButton_HOME_Z"))
@@ -249,7 +249,7 @@ class Ui_Form(object):
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
-        Form.setWindowTitle(_translate("Form", "PyQt : CNC GCode GUI ", None))
+        Form.setWindowTitle(_translate("Form", "Simple G-Code GUI v0.2", None))
         self.pushButtonNouveau.setText(_translate("Form", "Nouveau", None))
         self.pushButtonOuvrir.setText(_translate("Form", "Ouvrir", None))
         self.pushButtonEnregistrer.setText(_translate("Form", "Enregistrer", None))
