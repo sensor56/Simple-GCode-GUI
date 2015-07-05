@@ -42,6 +42,8 @@ class myApp(QWidget, Ui_Form): # la classe reçoit le Qwidget principal ET la cl
 		self.connect(self.pushButton_X_MOINS_UN, SIGNAL("clicked()"), self.pushButton_X_MOINS_UN_Clicked) # connecte le signal Clicked de l'objet bouton à l'appel de la fonction voulue 
 		self.connect(self.pushButton_X_MOINS_DIX, SIGNAL("clicked()"), self.pushButton_X_MOINS_DIX_Clicked) # connecte le signal Clicked de l'objet bouton à l'appel de la fonction voulue 
 		self.connect(self.pushButton_HOME_X, SIGNAL("clicked()"), self.pushButton_HOME_X_Clicked) # connecte le signal Clicked de l'objet bouton à l'appel de la fonction voulue 
+		self.connect(self.pushButton_RAZ_X, SIGNAL("clicked()"), self.pushButton_RAZ_X_Clicked) # connecte le signal Clicked de l'objet bouton à l'appel de la fonction voulue 
+		self.connect(self.pushButton_X_GOTO_ZERO, SIGNAL("clicked()"), self.pushButton_X_GOTO_ZERO_Clicked) # connecte le signal Clicked de l'objet bouton à l'appel de la fonction voulue 
 
 		# -- Y
 		self.connect(self.pushButton_Y_PLUS_UN, SIGNAL("clicked()"), self.pushButton_Y_PLUS_UN_Clicked) # connecte le signal Clicked de l'objet bouton à l'appel de la fonction voulue 
@@ -49,6 +51,8 @@ class myApp(QWidget, Ui_Form): # la classe reçoit le Qwidget principal ET la cl
 		self.connect(self.pushButton_Y_MOINS_UN, SIGNAL("clicked()"), self.pushButton_Y_MOINS_UN_Clicked) # connecte le signal Clicked de l'objet bouton à l'appel de la fonction voulue 
 		self.connect(self.pushButton_Y_MOINS_DIX, SIGNAL("clicked()"), self.pushButton_Y_MOINS_DIX_Clicked) # connecte le signal Clicked de l'objet bouton à l'appel de la fonction voulue 
 		self.connect(self.pushButton_HOME_Y, SIGNAL("clicked()"), self.pushButton_HOME_Y_Clicked) # connecte le signal Clicked de l'objet bouton à l'appel de la fonction voulue 
+		self.connect(self.pushButton_RAZ_Y, SIGNAL("clicked()"), self.pushButton_RAZ_Y_Clicked) # connecte le signal Clicked de l'objet bouton à l'appel de la fonction voulue 
+		self.connect(self.pushButton_Y_GOTO_ZERO, SIGNAL("clicked()"), self.pushButton_Y_GOTO_ZERO_Clicked) # connecte le signal Clicked de l'objet bouton à l'appel de la fonction voulue 
 
 		# -- Z
 		self.connect(self.pushButton_Z_PLUS_ZERO_UN, SIGNAL("clicked()"), self.pushButton_Z_PLUS_ZERO_UN_Clicked) # connecte le signal Clicked de l'objet bouton à l'appel de la fonction voulue 
@@ -59,8 +63,14 @@ class myApp(QWidget, Ui_Form): # la classe reçoit le Qwidget principal ET la cl
 		self.connect(self.pushButton_Z_MOINS_DIX, SIGNAL("clicked()"), self.pushButton_Z_MOINS_DIX_Clicked) # connecte le signal Clicked de l'objet bouton à l'appel de la fonction voulue 
 		self.connect(self.pushButton_HOME_Z, SIGNAL("clicked()"), self.pushButton_HOME_Z_Clicked) # connecte le signal Clicked de l'objet bouton à l'appel de la fonction voulue 
 		self.connect(self.pushButton_RAZ_Z, SIGNAL("clicked()"), self.pushButton_RAZ_Z_Clicked) # connecte le signal Clicked de l'objet bouton à l'appel de la fonction voulue 
+		self.connect(self.pushButton_Z_GOTO_ZERO, SIGNAL("clicked()"), self.pushButton_Z_GOTO_ZERO_Clicked) # connecte le signal Clicked de l'objet bouton à l'appel de la fonction voulue 
 
+		# -- Speed - slider et pushbutton
+		self.connect(self.horizontalSlider_SET_SPEED, SIGNAL("valueChanged(int)"), self.horizontalSlider_SET_SPEED_ValueChanged) 
+		self.connect(self.horizontalSlider_SET_SPEED, SIGNAL("sliderReleased()"), self.horizontalSlider_SET_SPEED_Released) 
 
+		self.connect(self.pushButton_SET_SPEED, SIGNAL("clicked()"), self.pushButton_SET_SPEED_Clicked) # connecte le signal Clicked de l'objet bouton à l'appel de la fonction voulue 
+ 
 		# port série 
 		self.connect(self.pushButtonInitSerial, SIGNAL("clicked()"), self.pushButtonInitSerialClicked) 
 		self.connect(self.pushButtonEnvoi, SIGNAL("clicked()"), self.pushButtonEnvoiClicked) 
@@ -254,6 +264,7 @@ G90
 		
 		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
 
+	#-- home Z
 	def pushButton_HOME_Z_Clicked(self): # lors appui bouton initialisation série 
 		print("Bouton HOME Z cliqué")
 		
@@ -263,11 +274,90 @@ G90
 		
 		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
 
+	#-- RAZ X
+	def pushButton_RAZ_X_Clicked(self): # lors appui bouton initialisation série 
+		print("Bouton RAZ X cliqué")
+		
+		gcode=(
+"""G92 X0
+""")
+		
+		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
+
+	#-- RAZ X
+	def pushButton_RAZ_Y_Clicked(self): # lors appui bouton initialisation série 
+		print("Bouton RAZ Y cliqué")
+		
+		gcode=(
+"""G92 Y0
+""")
+		
+		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
+
+	#-- RAZ Z
 	def pushButton_RAZ_Z_Clicked(self): # lors appui bouton initialisation série 
 		print("Bouton RAZ Z cliqué")
 		
 		gcode=(
 """G92 Z0
+""")
+		
+		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
+
+	#-- GOTO ZERO X
+	def pushButton_X_GOTO_ZERO_Clicked(self): # lors appui bouton initialisation série 
+		print("Bouton GOTO XO cliqué")
+		
+		gcode=(
+"""G01 X0
+""")
+		
+		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
+
+	#-- GOTO ZERO Y
+	def pushButton_Y_GOTO_ZERO_Clicked(self): # lors appui bouton initialisation série 
+		print("Bouton GOTO Y0 cliqué")
+		
+		gcode=(
+"""G01 Y0
+""")
+		
+		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
+
+	#-- GOTO ZERO Z
+	def pushButton_Z_GOTO_ZERO_Clicked(self): # lors appui bouton 
+		print("Bouton GOTO Z0 cliqué")
+		
+		gcode=(
+"""G01 Z0
+""")
+		
+		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
+
+	#-- Slider SET SPEED
+	def horizontalSlider_SET_SPEED_ValueChanged(self, valeur): # fonction appelée si changement valeur slider - reçoit la valeur courante
+		print("Slider modifié : valeur = " + str(valeur))
+
+	def horizontalSlider_SET_SPEED_Released(self): # fonction appelée si changement souris relâchée
+		print("Slider : clic souris relaché")
+		print("Valeur = " + str(self.horizontalSlider_SET_SPEED.value()))
+
+		speed=self.horizontalSlider_SET_SPEED.value() # récupère valeur courante slider
+		
+		gcode=(
+"""G01 F"""+str(speed)+"""
+""")
+		
+		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
+
+	#-- pushbutton SET SPEED
+	def pushButton_SET_SPEED_Clicked(self): # lors appui bouton 
+		print("Bouton SET SPEED cliqué")
+
+		speed=self.horizontalSlider_SET_SPEED.value() # récupère valeur courante slider
+		
+		gcode=(
+"""G01 F"""+str(speed)+"""
 """)
 		
 		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
@@ -927,7 +1017,6 @@ def main(args):
 #-- pour rendre le code exécutable
 if __name__=="__main__": # pour rendre le code exécutable 
 	main(sys.argv) # appelle la fonction main
-
 
 
 
