@@ -8,4 +8,5 @@ Interface PyQt de contrôle d'une machine 3 axes programmée avec [Simple G-Code
 
 ### TODO
 - case à cocher d'activation du Home Z
-- bouton RAZ des backslash
+- bouton RAZ des backlash ? e/o champ 
+- bouton recalage des axes (G01 X5 Y5 F4 suivi de G28 X Y ) 
