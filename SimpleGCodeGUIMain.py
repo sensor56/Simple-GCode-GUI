@@ -76,6 +76,9 @@ class myApp(QWidget, Ui_Form): # la classe reçoit le Qwidget principal ET la cl
 		self.connect(self.pushButtonEnvoi, SIGNAL("clicked()"), self.pushButtonEnvoiClicked) 
 		self.connect(self.pushButtonStop, SIGNAL("clicked()"), self.pushButtonStopClicked) 
 
+		# - pour envoi sur appui return dans lineEdit
+		self.connect(self.lineEditChaineEnvoi, SIGNAL("returnPressed()"), self.pushButtonEnvoiClicked) # connecte le signal Clicked de l'objet bouton à l'appel de la fonction voulue 
+
 		#initialisation Timer
 		self.timerSerial=QTimer() # déclare un timer Qt
 		self.connect(self.timerSerial, SIGNAL("timeout()"), self.timerSerialEvent) # connecte le signal timeOut de l'objet timer à l'appel de la fonction voulue 
