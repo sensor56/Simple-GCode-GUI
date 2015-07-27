@@ -94,7 +94,7 @@ class myApp(QWidget, Ui_Form): # la classe reçoit le Qwidget principal ET la cl
 	#---- les boutons de contrôle des axes X,Y,Z de l'interface
 	# -- X 
 	def pushButton_X_PLUS_UN_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton X+1 cliqué")
+		print(u"Bouton X+1 cliqué")
 		
 		gcode=(
 """G91
@@ -105,7 +105,7 @@ G90
 		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
 
 	def pushButton_X_PLUS_DIX_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton X+10 cliqué")
+		print(u"Bouton X+10 cliqué")
 		
 		gcode=(
 """G91
@@ -116,7 +116,7 @@ G90
 		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
 
 	def pushButton_X_MOINS_UN_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton X-1 cliqué")
+		print(u"Bouton X-1 cliqué")
 		
 		gcode=(
 """G91
@@ -127,7 +127,7 @@ G90
 		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
 
 	def pushButton_X_MOINS_DIX_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton X-10 cliqué")
+		print(u"Bouton X-10 cliqué")
 		
 		gcode=(
 """G91
@@ -138,7 +138,7 @@ G90
 		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
 
 	def pushButton_HOME_X_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton HOME X cliqué")
+		print(u"Bouton HOME X cliqué")
 		
 		gcode=(
 """G28 X0
@@ -148,7 +148,7 @@ G90
 
 	# -- Y 
 	def pushButton_Y_PLUS_UN_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton Y+1 cliqué")
+		print(u"Bouton Y+1 cliqué")
 		
 		gcode=(
 """G91
@@ -159,7 +159,7 @@ G90
 		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
 
 	def pushButton_Y_PLUS_DIX_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton Y+10 cliqué")
+		print(u"Bouton Y+10 cliqué")
 		
 		gcode=(
 """G91
@@ -170,7 +170,7 @@ G90
 		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
 
 	def pushButton_Y_MOINS_UN_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton Y-1 cliqué")
+		print(u"Bouton Y-1 cliqué")
 		
 		gcode=(
 """G91
@@ -181,7 +181,7 @@ G90
 		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
 
 	def pushButton_Y_MOINS_DIX_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton Y-10 cliqué")
+		print(u"Bouton Y-10 cliqué")
 		
 		gcode=(
 """G91
@@ -192,7 +192,7 @@ G90
 		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
 
 	def pushButton_HOME_Y_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton HOME Y cliqué")
+		print(u"Bouton HOME Y cliqué")
 		
 		gcode=(
 """G28 Y0
@@ -202,7 +202,7 @@ G90
 
 	# -- Z 
 	def pushButton_Z_PLUS_ZERO_UN_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton Z+0.1 cliqué")
+		print(u"Bouton Z+0.1 cliqué")
 		
 		gcode=(
 """G91
@@ -213,7 +213,7 @@ G90
 		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
 
 	def pushButton_Z_PLUS_UN_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton Z+1 cliqué")
+		print(u"Bouton Z+1 cliqué")
 		
 		gcode=(
 """G91
@@ -224,7 +224,7 @@ G90
 		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
 
 	def pushButton_Z_PLUS_DIX_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton Z+10 cliqué")
+		print(u"Bouton Z+10 cliqué")
 		
 		gcode=(
 """G91
@@ -235,7 +235,7 @@ G90
 		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
 
 	def pushButton_Z_MOINS_ZERO_UN_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton Z-0.1 cliqué")
+		print(u"Bouton Z-0.1 cliqué")
 		
 		gcode=(
 """G91
@@ -246,7 +246,7 @@ G90
 		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
 
 	def pushButton_Z_MOINS_UN_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton Z-1 cliqué")
+		print(u"Bouton Z-1 cliqué")
 		
 		gcode=(
 """G91
@@ -257,7 +257,7 @@ G90
 		self.envoiGCode(gcode) # envoie le GCode vers machine avec attente des réponses <ok>
 
 	def pushButton_Z_MOINS_DIX_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton Z-10 cliqué")
+		print(u"Bouton Z-10 cliqué")
 		
 		gcode=(
 """G91
@@ -269,7 +269,7 @@ G90
 
 	#-- home Z
 	def pushButton_HOME_Z_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton HOME Z cliqué")
+		print(u"Bouton HOME Z cliqué")
 		
 		gcode=(
 """G28 Z0
@@ -279,7 +279,7 @@ G90
 
 	#-- RAZ X
 	def pushButton_RAZ_X_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton RAZ X cliqué")
+		print(u"Bouton RAZ X cliqué")
 		
 		gcode=(
 """G92 X0
@@ -289,7 +289,7 @@ G90
 
 	#-- RAZ X
 	def pushButton_RAZ_Y_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton RAZ Y cliqué")
+		print(u"Bouton RAZ Y cliqué")
 		
 		gcode=(
 """G92 Y0
@@ -299,7 +299,7 @@ G90
 
 	#-- RAZ Z
 	def pushButton_RAZ_Z_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton RAZ Z cliqué")
+		print(u"Bouton RAZ Z cliqué")
 		
 		gcode=(
 """G92 Z0
@@ -309,7 +309,7 @@ G90
 
 	#-- GOTO ZERO X
 	def pushButton_X_GOTO_ZERO_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton GOTO XO cliqué")
+		print(u"Bouton GOTO XO cliqué")
 		
 		gcode=(
 """G01 X0
@@ -319,7 +319,7 @@ G90
 
 	#-- GOTO ZERO Y
 	def pushButton_Y_GOTO_ZERO_Clicked(self): # lors appui bouton initialisation série 
-		print("Bouton GOTO Y0 cliqué")
+		print(u"Bouton GOTO Y0 cliqué")
 		
 		gcode=(
 """G01 Y0
@@ -329,7 +329,7 @@ G90
 
 	#-- GOTO ZERO Z
 	def pushButton_Z_GOTO_ZERO_Clicked(self): # lors appui bouton 
-		print("Bouton GOTO Z0 cliqué")
+		print(u"Bouton GOTO Z0 cliqué")
 		
 		gcode=(
 """G01 Z0
@@ -339,11 +339,11 @@ G90
 
 	#-- Slider SET SPEED
 	def horizontalSlider_SET_SPEED_ValueChanged(self, valeur): # fonction appelée si changement valeur slider - reçoit la valeur courante
-		print("Slider modifié : valeur = " + str(valeur))
+		print(u"Slider modifié : valeur = " + str(valeur))
 
 	def horizontalSlider_SET_SPEED_Released(self): # fonction appelée si changement souris relâchée
-		print("Slider : clic souris relaché")
-		print("Valeur = " + str(self.horizontalSlider_SET_SPEED.value()))
+		print(u"Slider : clic souris relaché")
+		print(u"Valeur = " + str(self.horizontalSlider_SET_SPEED.value()))
 
 		speed=self.horizontalSlider_SET_SPEED.value() # récupère valeur courante slider
 		
@@ -355,7 +355,7 @@ G90
 
 	#-- pushbutton SET SPEED
 	def pushButton_SET_SPEED_Clicked(self): # lors appui bouton 
-		print("Bouton SET SPEED cliqué")
+		print(u"Bouton SET SPEED cliqué")
 
 		speed=self.horizontalSlider_SET_SPEED.value() # récupère valeur courante slider
 		
@@ -367,7 +367,7 @@ G90
 
 		#----- les fonctions des signaux des boutons du Terminal série ---- 				
 	def pushButtonInitSerialClicked(self): # lors appui bouton initialisation série 
-		print("Bouton Init cliqué")
+		print(u"Bouton Init cliqué")
 		if self.serialPort: # si le port existe déjà 
 			self.serialPort.close() # ferme le port si existe
 
@@ -385,14 +385,14 @@ G90
 			self.serialPort=serial.Serial(strPortInit, strDebitInit, serial.EIGHTBITS, serial.PARITY_NONE, serial.STOPBITS_ONE, timeout=0.1) 			
 			#self.serialPort=serial.Serial(strPortInit, strDebitInit) # initialise port serie forme réduite 
 			self.serialPort.flushInput() # vide la file d'attente série
-			print("Initialisation Port Série : " + strPortInit +" @ " + strDebitInit +" = OK ") # affiche debug
+			print(u"Initialisation Port Série : " + strPortInit +" @ " + strDebitInit +" = OK ") # affiche debug
 			
 			#-- change aspect bouton init
 			self.pushButtonInitSerial.setStyleSheet(QString.fromUtf8("background-color: rgb(0, 255, 0);")) # bouton en vert
 			self.pushButtonInitSerial.setText("OK")  # change titre bouton 
 			
 		except: # si erreur initialisation 
-			print("Erreur initialisation Série")		
+			print(u"Erreur initialisation Série")		
 				
 			#-- change aspect bouton init
 			self.pushButtonInitSerial.setStyleSheet(QString.fromUtf8("background-color: rgb(255, 127, 0);")) # bouton en orange
@@ -402,7 +402,7 @@ G90
 		self.timerSerial.start(self.spinBoxDelaiReception.value()) # lance le timer avec délai en ms avec valeur spinbox
 		
 	def pushButtonEnvoiClicked(self): # lors appui bouton envoi série du champ du Terminal Série
-		print("Bouton ENVOI appuyé")
+		print(u"Bouton ENVOI appuyé")
 		self.envoiChaineSerie(str(self.lineEditChaineEnvoi.text())) # envoi le contenu du champ texte sur le port série 
 	
 	#----- fonction de classe commune d'envoi d'une chaîne sur le port série ---- 
@@ -416,22 +416,22 @@ G90
 			if self.comboBoxFinLigne.currentIndex()==0: # si rien sélectionné
 				# self.serialPort.write(str(self.lineEditChaineEnvoi.text())+'\n'  ) # envoie la chaine sur le port serie		
 				self.serialPort.write(chaineIn)  # envoie la chaine sur le port serie	- variante ascii	
-				print("Envoi Série : " + chaineIn )
+				print(u"Envoi Série : " + chaineIn )
 				self.textEditTraceEnvoiSerie.append(chaineIn) # ajoute texteEdit de visualisation 
 
 			if self.comboBoxFinLigne.currentIndex()==1: # si saut de ligne sélectionné
 				self.serialPort.write(chaineIn +chr(10) ) # envoie la chaine sur le port serie	- variante ascii	
-				print("Envoi Série : " + chaineIn + '\n')
+				print(u"Envoi Série : " + chaineIn + '\n')
 				self.textEditTraceEnvoiSerie.append(chaineIn) # ajoute texteEdit de visualisation 
 				
 			if self.comboBoxFinLigne.currentIndex()==2: # si retour chariot sélectionné
 				self.serialPort.write(chaineIn+chr(13)  ) # envoie la chaine sur le port serie	- variante ascii	
-				print("Envoi Série : " + chaineIn + '\r')
+				print(u"Envoi Série : " + chaineIn + '\r')
 				self.textEditTraceEnvoiSerie.append(chaineIn) # ajoute texteEdit de visualisation 
 				
 			if self.comboBoxFinLigne.currentIndex()==3: # si saut de ligne + retour chariot sélectionné
 				self.serialPort.write(chaineIn+chr(10)+chr(13)  ) # envoie la chaine sur le port serie	- variante ascii
-				print("Envoi Série : " + chaineIn + '\n'+'\r')
+				print(u"Envoi Série : " + chaineIn + '\n'+'\r')
 				self.textEditTraceEnvoiSerie.append(chaineIn) # ajoute texteEdit de visualisation 
 			
 			self.timerSerial.start(self.spinBoxDelaiReception.value()) # lance le timer avec délai en ms avec valeur spinbox	
@@ -463,7 +463,7 @@ G90
 				
 				self.serialPort.write(line+"\n")  # envoie la chaine sur le port serie
 				
-				print "envoi ligne : " + line 
+				print u"envoi ligne : " + line 
 				
 				# lecture des données reçues		
 
@@ -527,7 +527,7 @@ G90
 
 	#-- fonction gestion clicked pushButton Stop 
 	def pushButtonStopClicked(self):
-		print("Bouton Stop cliqué")
+		print(u"Bouton Stop cliqué")
 
 		#-- stoppe la réception série -- 
 		if self.serialPort: # si le port existe déjà 
@@ -555,7 +555,7 @@ G90
 				#self.chaineIn=self.chaineIn+self.char		# forme minimale...
 				
 				if self.char=='\n': # si saut de ligne, on sort du while
-					print("saut ligne reçu") # debug
+					print(u"saut ligne reçu") # debug
 					break # sort du while
 				else: #tant que c'est pas le saut de ligne, on l'ajoute à la chaine 
 					self.chaineIn=self.chaineIn+self.char					
@@ -620,7 +620,7 @@ G90
 
 		if chaineRefIn[0:posRef]==chaineTestIn : # si reçoit l'instruction chaineTest(
      
-			if (debugIn): print("Racine reconnue : "+str(chaineTestIn)) 
+			if (debugIn): print(u"Racine reconnue : "+str(chaineTestIn)) 
  
 			paramString=chaineRefIn[posRef:len(chaineRefIn)-1] # extrait la chaine de caractere recue en parametre 
 			if (debugIn): print(paramString) # affiche la chaine de caractere
@@ -715,7 +715,7 @@ G90
 	
 	#========== fonctions des signaux pour la gestion du fichier ====================
 	def pushButtonOuvrirClicked(self):
-		print("Bouton <OUVRIR> appuyé")
+		print(u"Bouton <OUVRIR> appuyé")
 		
 		# ouvre fichier en tenant compte du chemin déjà saisi dans le champ 
 		if self.lineEditChemin.text()=="":
@@ -754,7 +754,7 @@ G90
 	# -- fin def pushButtonOuvrirClicked
 
 	def pushButtonNouveauClicked(self):
-		print("Bouton NOUVEAU appuyé")
+		print(u"Bouton NOUVEAU appuyé")
 		
 		# ouvre fichier en tenant compte du chemin déjà saisi dans le champ 
 		if self.lineEditChemin.text()=="":
@@ -785,7 +785,7 @@ G90
 		
 
 	def pushButtonEnregistrerClicked(self):		
-		print("Bouton <ENREGISTRE> appuyé")			
+		print(u"Bouton <ENREGISTRE> appuyé")			
 	
 		if self.lineEditChemin.text()!="":
 			#self.myFile = open(self.filename, 'a') # ouverture du fichier en mode écriture append
@@ -796,7 +796,7 @@ G90
 			self.myFile.close() # ferme le fichier 
 
 	def pushButtonEnvoiGCodeClicked(self):
-		print("Bouton <Envoi GCode> appuyé")
+		print(u"Bouton <Envoi GCode> appuyé")
 		
 		gcode=str(self.textEdit.toPlainText())
 		
@@ -899,20 +899,20 @@ G90
 	#--- fonctions stop envoi GCode ----
 	def pushButtonStopGCodeClicked(self):
 		self.stopGCode=True # active sortie GCode
-		print "stop GCode"
+		print u"stop GCode"
 		
 
 	#--- fonctions gestion envoi GCode ----
 	def pushButtonPassGCodeClicked(self):
 		self.flagOK=True # active flag reception OK
 		
-		print "pass GCode"
+		print u"pass GCode"
 
 
 
 	#====== gestion signaux repertoire ==========
 	def pushButtonOuvrirRepClicked(self):
-		print("Bouton <Sélectionner Répertoire> appuyé")
+		print(u"Bouton <Sélectionner Répertoire> appuyé")
 		
 		#self.filename=QFileDialog.getOpenFileName(self, 'Ouvrir fichier', os.getenv('HOME')) # ouvre l'interface fichier - home par défaut
 		#self.filename=QFileDialog.getOpenFileName(self, 'Ouvrir fichier', QDir.currentPath()) # ouvre l'interface fichier - chemin courant par défaut
