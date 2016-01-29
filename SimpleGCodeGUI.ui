@@ -303,22 +303,52 @@
    </property>
    <item>
     <property name="text">
-     <string>/dev/ttyACM0</string>
+     <string>COM1</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>/dev/ttyACM1</string>
+     <string>COM2</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>/dev/ttyUSB0</string>
+     <string>COM3</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>/dev/ttyUSB1</string>
+     <string>COM4</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>COM5</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>COM6</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>COM7</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>COM8</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>COM9</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>COM10</string>
     </property>
    </item>
   </widget>
