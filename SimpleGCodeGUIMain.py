@@ -4,7 +4,11 @@
 # par X. HINAULT - Déc 2012 - Avril 2015- Tous droits réservés
 # GPLv3 - www.mon-club-elec.fr
 
-# modules a importer 
+# modules a importer
+#sys.path.append(os.path.join('C:', 'Python27', 'Lib', 'site-packages', 'PyQt4'))
+#sys.path.append('C:\\python27\\Lib\\site-packages\\PyQt4')
+import sys
+sys.path.append('C:\\python27\\Lib\\site-packages\\PyQt4')
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *  # inclut QTimer..
 
@@ -719,8 +723,7 @@ G90
 		
 		# ouvre fichier en tenant compte du chemin déjà saisi dans le champ 
 		if self.lineEditChemin.text()=="":
-			self.filename=QFileDialog.getOpenFileName(self, 'Ouvrir fichier', os.getenv('HOME')) # ouvre l'interface fichier - home par défaut
-			#self.filename=QFileDialog.getOpenFileName(self, 'Ouvrir fichier', QDir.currentPath()) # ouvre l'interface fichier - chemin courant par défaut
+			self.filename=QFileDialog.getOpenFileName(self, 'Ouvrir fichier', os.getenv('PATH')) # ouvre l'interface fichier - chemin courant par défaut
 		else:
 			info=QFileInfo(self.lineEditChemin.text()) # définit un objet pour manipuler info sur fichier à partir chaine champ
 			print info.absoluteFilePath() # debug	
